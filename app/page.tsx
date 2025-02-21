@@ -84,7 +84,7 @@ export default function EggTimer() {
         {screen === "welcome" && (
           <div className="text-center space-y-6">
             <div className="flex justify-center">
-              <img src="/placeholder.svg?height=200&width=200" alt="Cartoon Egg" className="w-48 h-48 object-contain" />
+              <img src="/screen1.webp?height=200&width=200" alt="Cartoon Egg" className="w-48 h-48 object-contain" />
             </div>
             <h1 className="text-2xl font-bold text-orange-600">Let&apos;s start cooking your egg!</h1>
             <Button
@@ -109,7 +109,7 @@ export default function EggTimer() {
                   onClick={() => handleStartCooking(time)}
                 >
                   <img
-                    src="/placeholder.svg?height=50&width=50"
+                    src = {`/${type}.jpg?height=50&width=50`}
                     alt={`${type} egg`}
                     className="w-12 h-12 object-contain"
                   />
@@ -125,7 +125,7 @@ export default function EggTimer() {
           <div className="text-center space-y-6">
             <div className="flex justify-center">
               <img
-                src={isTimerDone ? "/placeholder.svg?height=200&width=200" : "/placeholder.svg?height=200&width=200"}
+                src={isTimerDone ? "/eggcooked.gif?height=200&width=200" : "/eggcooking.gif?height=200&width=200"}
                 alt={isTimerDone ? "Cooked Egg" : "Cooking Egg"}
                 className={`w-48 h-48 object-contain ${!isTimerDone && "animate-bounce"}`}
               />
